@@ -323,6 +323,22 @@ figcaption{
 			position: absolute;
 		}
 	}
+	@media (max-width: 991px){
+		height: auto;
+		padding-top: 20px;
+		padding-bottom: 40px;
+		font-size: 0.8em;
+		.desc-content, .logotype, .bnr-main-img{
+			display: none;
+		}
+		.bnr-feedback{
+			position: relative;
+			margin-bottom: 60px;
+			.flex{
+				justify-content: center;
+			}
+		}
+	}
 }
 .bnr-feedback{
 	position: absolute;
@@ -353,5 +369,382 @@ figcaption{
 		background-size: 50%;
 		
 		margin: auto;
+	}
+}
+
+
+
+//about
+.about{
+	position: relative;
+	overflow: hidden;
+	&:before{
+		@extend .clafclear;
+		background-image: url('../img/bg/bg-about.jpg');
+		right: 0;
+		width: 537px;
+		height: 1591px;
+		background-repeat: no-repeat;
+		@media (max-width: 991px){
+			display: none;
+		}
+	}
+}
+.about-content{
+	padding-top: 15px;
+	position: relative;
+	float: left;
+	overflow: hidden;
+	
+	@media (min-width: 992px){
+		width: 60%;
+		width: calc(100% - 460px);
+		padding-top: 80px;
+		padding-right: 30px;
+		padding-bottom: 80px;
+	}
+	@media (max-width: 991px){
+		width: 100%;
+	}
+}
+.about-items{
+	display: flex;
+	flex-wrap: wrap;
+
+	.boxes-cell-wrapper{
+		height: 100%;
+		background-color: #f2f2f2;
+		min-height: 170px;
+		padding: 20px;
+	}
+	.boxes-cell{
+		padding-left: 15px;
+		padding-right: 15px;
+		width: 50%;
+		h2{
+			margin-top: 0;
+		}
+		@media (max-width: 991px){
+			width: 100%;
+		}
+	}
+	@media (min-width: 992px){
+		margin-left: -15px;
+		margin-right: -15px;
+	}
+}
+
+
+//advantages
+.advantages{
+	background-image: url('../img/bg/bg-advantages.jpg');
+	background-repeat: no-repeat;
+	background-color: white;
+	background-size: cover;
+	background-position: -300px center;
+	position: relative;
+	.parallax-scenes{
+		position: absolute;
+		pointer-events: none;
+	}
+	.ellipse{
+		bottom: -50px;
+		left: 40%;
+		position: absolute !important;
+		img{
+			width: 310px;
+		}
+	}
+}
+.advantages-content{
+	color: white;
+	&>div{
+		position: relative !important;
+	}
+	padding-top: 20px;
+	padding-bottom: 20px;
+	@media (min-width: 991px){
+		height: 420px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+.advatages-items{
+	.bg-icon{
+		position: absolute;
+		opacity: 0.15;
+		pointer-events: none;
+		right: -10px;
+		bottom: -30px;
+		font-size: 165px;
+	}
+	figure{
+		overflow: hidden;
+		background-color: $color-1;
+		position: relative;
+		transition: all 0.3s ease;
+		&:hover{
+			transform: translateY(-10px);
+			background-color: darken($color-1, 2%);
+		}
+	}
+	.fig-wrapper{
+		padding: 30px 30px;
+		@media (min-width: 1880px){
+			padding: 30px 60px;
+		}
+	}
+
+}
+
+
+
+
+//humans
+.humans{
+	position: relative;
+	@media (max-width: 991px){
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+	.sundots-img{
+		position: absolute;
+		bottom: -480px;
+		right: -180px;
+	}
+	.nav-list{
+		display: flex;
+		@media (min-width: 991px){
+			margin-top: 60px;
+		}
+		li{
+			display: inline-block;
+			width: 100%;	
+			padding-left: 15px;
+			padding-right: 15px;
+			text-transform: uppercase;
+			font-weight: 600;
+			a{
+				color: black;
+				border: 1px solid $color-1;
+				background-color: transparent;
+				display: block;
+				padding: 20px 15px;
+				font-size: 0.95em;
+			}
+			&.active{
+				a{
+					color: white;
+					background-color: $color-1;
+				}
+			}
+		}
+	}
+}
+.humans-items{
+	color: white;
+	.fig-wrapper{
+		height: 360px;
+		//height: 16.6vw;
+		@media (max-width: 991px){
+			height: auto;
+			.img{
+				height: 250px;
+			}
+		}
+	}
+	*{
+		backface-visibility: hidden;
+	}
+	figure{
+		@media (min-width: 992px){
+			&:nth-child(6n+4), &:nth-child(6n+5), &:nth-child(6n+6){
+				.fig-wrapper{
+					flex-direction: row-reverse;
+				}
+				.desc-content{
+					&:after{
+						left: auto;
+						right: -19px;
+					}
+				}
+			}
+		}
+		&:hover{
+			.img{
+				transform: scale(1.05);
+			}
+		}
+	}
+	.img{
+		height: 100%;
+		transition: all 0.4s ease;
+		background-size: cover;
+		backface-visibility: hidden;
+	}
+	.desc-content, .img-content{
+		@media (min-width: 992px){
+			width: 50%;
+		}
+	}
+	.img-content{
+		overflow: hidden;
+		position: relative;
+	}
+	.desc-content{
+		padding: 10px 30px;
+		font-size: 1.2em;
+		background-color: $color-1;
+		height: 100%;
+		position: relative;
+		&:after{
+			@extend .clafclear;
+			background-color: $color-1;
+			width: 35px;
+			height: 35px;
+			left: -19px;
+			transform: scaleY(0.45) rotate(45deg);
+			@media (max-width: 991px){
+				transform: scaleX(0.45) rotate(135deg);
+		    left: 48%;
+		    left: calc(50% - 10px);
+		    width: 20px;
+		    height: 20px;
+		    top: -10px;
+			}
+		}
+	}
+}
+
+
+
+
+//forumlist
+.forumlist{
+	@media (min-width: 991px){
+		margin-top: 80px;
+		.btn-def{
+			a{
+				padding: 25px 70px;
+			}
+		}
+	}
+}
+.events{
+	&:nth-child(1){
+		th:nth-child(1){
+			background-color: $color-1;
+		}
+	}
+	table{
+		thead{
+			th{
+				@media (max-width: 991px){
+					font-size: 1em !important;
+					&:nth-child(1){
+						width: auto;
+					}
+				}
+			}	
+		}
+		th{
+			font-weight: 500;
+			padding-top: 15px;
+			padding-bottom: 15px;
+			vertical-align: middle;
+		}
+		th:nth-child(1){
+			background-color: black;
+			width: 180px;
+			color: white;
+			font-size: em(24);
+			text-align: center;
+			big{
+				display: block;
+				font-weight: 800;
+				font-size: em(40);
+				line-height: 100%;
+			}
+			small{
+				font-size: 0.8em;
+				font-weight: 400;
+				display: block;
+			}
+		}
+		th:nth-child(2){
+			font-size: em(32);
+			font-weight: 700;
+			padding-left: 12%;
+			position: relative;
+			&:before{
+				@extend .clafclear;
+				width: 15px;
+				height: 15px;
+				background-color: $color-1;
+				border-radius: 50%;
+				left: 8%;
+				top: 50%;
+				transform: translateY(-7.5px)
+			}
+		}
+		tbody{
+			tr{
+				&:nth-child(1){
+					td{
+						padding-top: 25px;
+					}
+				}
+				td{
+					padding: 12px 15px;
+					&:nth-child(1){
+						text-align: center;
+						background-color: #ececec;
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+//supported
+.supported{
+	background-color: #f7f7f7;
+}
+.supported-items{
+	figure{
+		.img-content{
+			background-color: white;
+			padding: 40px 40px;
+			.img{
+				background-size: contain;
+				height: 150px;
+			}
+			@media (max-width: 991px){
+				padding: 10px 10px;
+			}
+		}
+	}
+}
+
+
+//partners
+.partners-items{
+	figure{
+		.img-content{
+			background-color: white;
+			padding: 15px 30px;
+			@extend .shadow-box-1;
+			.img{
+				background-size: contain;
+				height: 140px;
+			}
+		}
+	}
+	@media (max-width: 991px){
+		padding-left: 15px;
+		padding-right: 15px;
 	}
 }

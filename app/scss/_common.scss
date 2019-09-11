@@ -619,22 +619,23 @@ table {
 	transition: all 0.2s ease;
 	position: relative;
 	overflow: visible;
-	&:before, &:after{
-		@extend .clafclear;
-		border: 1px solid $color-1;
-		z-index: -1;
-	}
-	&:before{
-		left: -8px;
-		top: -7px;
-		width: calc(100% + 15px);
-		height: calc(100% + 15px);
-		border-color: rgba($color-1, 0.5);
-	}
-	&:after{
-		left: 12px;
-		top: 13px;
-		
+	&.style-1{
+		&:before, &:after{
+			@extend .clafclear;
+			border: 1px solid $color-1;
+			z-index: -1;
+		}
+		&:before{
+			left: -8px;
+			top: -7px;
+			width: calc(100% + 15px);
+			height: calc(100% + 15px);
+			border-color: rgba($color-1, 0.5);
+		}
+		&:after{
+			left: 12px;
+			top: 13px;
+		}
 	}
 	*{
 		color: inherit;
@@ -946,10 +947,13 @@ h1, h2, h3, h4{
 	position: relative;	
 }
 h1{
-	font-size: em(36);
+	font-size: em(40);
 	margin-bottom: 15px;
-	font-weight: 600;
+	font-weight: 800;
 	line-height: 120%;
+	@media (min-width: 1880px){
+		font-size: em(50);
+	}
 	@media (max-width: 991px) {
 		font-size: em(26);
 	}
@@ -1037,6 +1041,11 @@ main{
 		position: relative;
 		line-height: 135%;
 	}
+	@media(min-width: 1880px){
+		p{
+			font-size: em(18);
+		}
+	}
 	ul:not([class]){
 		text-align: left;
 		margin-top: 10px;
@@ -1055,10 +1064,7 @@ main{
 
 }
 .container-fluid-page{
-	@extend .container-fluid;
-	@media (min-width: 1300px) {
-		width: 1100px;
-	}
+	@extend .container;
 	@media (min-width: 1500px) {
 		width: 1300px;
 	}
@@ -1068,6 +1074,7 @@ main{
 	@media (min-width: 1880px) {
 		width: 1600px;
 	}
+
 
 
 

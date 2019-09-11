@@ -300,7 +300,6 @@
 		})
 
 
-		//var scene = $(".product-img");
 		$(".parallax-scene").map(function(i, el){
 			var parallaxInstance = new Parallax(el);
 		})
