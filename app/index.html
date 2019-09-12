@@ -27,26 +27,30 @@
 				<!-- form-main -->
 				<div class="form-main clearfix">
 					<div class="text-center">
-						<h2>Закажите бесплатную консультацию</h2>
+						<h2>Savollaringiz bormi?</h2>
+						<p>30 daqiqa ichida Siz bilan bog‘lanib, savolingizga javob beramiz</p>
 					</div>
-					<div class="form-content clearfix">
-						<h5>Перезвоним в течении 10 минут</h5>
+					<div class="form-content clearfix m-v-30">
 						<form action="" method="get" accept-charset="utf-8">
 							<label class="m-v-10 box-xs-10">
 								<div class="input-icon">
 									<span class="fa fa-user"></span>
-									<input type="text" name="" value="" class="form-control" placeholder="ФИО">
+									<input type="text" name="" value="" class="form-control" placeholder="Iltimos, ismingizni kiriting">
 								</div>
 							</label>
 							<label class="m-v-10 box-xs-10">
 								<div class="input-icon">
 									<span class="fa fa-phone"></span>
-									<input type="text" name="" value="" class="form-control" placeholder="Номер телефона">
+									<input type="text" name="" value="" class="form-control" placeholder="Telefon raqamingiz">
 								</div>
 							</label>
+							<label class="m-v-10 box-xs-10">
+								<textarea type="text" name="" value="" class="form-control" placeholder="Telefon raqamingiz"></textarea>
+							</label>
+
 							<div class="text-right-md">
 								<span class="btn-def m-v-15">
-									<button  type="submit" class="p-h-30">Заказать звонок</button>
+									<button  type="submit" class="p-h-30">Yuborish</button>
 								</span>
 							</div>
 						</form>
@@ -80,7 +84,17 @@
 
 			<!-- bnr -->
 			<div class="bnr">
-				<div class="bnr-wrapper" style="background-image: url('img/bg/bg-bnr.jpg');">
+				<div class="parallax-scenes">
+					<div class="parallax-scene">
+						<div class="img" style="background-image: url('img/bg/bg-parallax-bnr-1.png');" data-depth="-0.02"></div>
+						<div class="img" style="background-image: url('img/bg/bg-parallax-bnr-2.png');" data-depth="0.05"></div>
+						<div class="img" style="background-image: url('img/bg/bg-parallax-advantages-2.png');" data-depth="0.2"></div>
+					</div>
+<!-- 					<div class="parallax-scene">
+						<img src="img/bg/bg-parallax-bnr-2.png" data-depth="0.2">
+					</div> -->
+				</div>
+				<div class="bnr-wrapper" style="background-image: url('img/bg/bg-bnr-2.jpg');">
 					<div class="bnr-main-img">
 						<div class="img" style="background-image: url('img/other/bnr-main-img.png');"></div>
 					</div>
@@ -99,7 +113,7 @@
 								</div>
 							</div>
 							<div class="btn-def style-1 m-t-30">
-								<a href="">Chipta sotib olish</a>
+								<a href="#form_def" data-fancybox>Chipta sotib olish</a>
 							</div>
 						</div>
 						<div class="entry-header">
@@ -131,6 +145,9 @@
 							</div>
 						</div>
 					</div>
+				</div>
+				<div class="bnr-circle">
+					<div class="img" style="background-image: url('img/other/ellipse-1.png');"></div>
 				</div>
 			</div>
 
@@ -642,7 +659,7 @@
 					</div>
 					<div class="btn-content text-center m-v-30">
 						<span class="btn-def">
-							<a href="">Chipta sotib olish</a>
+							<a href="#form_def" data-fancybox>Chipta sotib olish</a>
 						</span>
 					</div>
 				</div>
@@ -873,111 +890,64 @@
 		</main><!-- ./MAIN -->
 		<!-- FOOTER -->
 		<footer id="footer" class="text-center-sm">
-			<div class="container">
-				<div class="footer-content logotype-padding">
-					<div class="footer-menu hover-color-1">
-						<div class="item">
-							<h2>Наша компания</h2>
-							<ul class="list">
-								<li><a href="about.html">О компании</a></li>
-								<li><a href="ourmission.html">Наша миссия и задача</a></li>
-								<li><a href="socres.html">Корпоративная социальная ответственность</a></li>
-								<li><a href="contacts.html">Связаться с нами</a></li>
-								<li><a href="direct-sales.html">Индустрия прямых продаж</a></li>
-								<li><a href="honors.html">Доска почета QNET</a></li>
-								<li><a href="">Наша история</a></li>
-								<li><a href="">Брендинг и спонсирование спортивных мероприятий</a></li>
-								<li><a href="">Оставайтесь на связи</a></li>
-							</ul>
-						</div>
-						<div class="item">
-							<h2>Наша продукция</h2>
-							<ul class="list">
-								<li><a href="product.html">Здоровье и благополучие</a></li>
-								<li><a href="product.html">Часы и ювелирные изделия</a></li>
-								<li><a href="product.html">Дом и уют</a></li>
-								<li><a href="product.html">Образование</a></li>
-								<li><a href="product.html">Уход за собой и красота</a></li>
-								<li><a href="product.html">Отдых</a></li>
-								<li><a href="product.html">Технологии</a></li>
-							</ul>
-						</div>
-						<div class="item">
-							<h2>Возможность</h2>
-							<ul class="list">
-								<li><a href="plan.html">Компенсационный план</a></li>
-								<li><a href="branding.html">Профессиональный маркетинг</a></li>
-							</ul>
-						</div>
-						<div class="item">
-							<h2><a href="news.html">Новости</a></h2>
-						</div>
+
+			<div class="footer-feedback-img"></div>
+
+			<div class="footer-ellipse">
+				<img src="img/other/ellipse-2.png">
+			</div>
+			<div class="parallax-scenes">
+				<div class="parallax-scene">
+					<img src="img/bg/bg-parallax-advantages-2.png" data-depth="0.1">
+				</div>
+				<div class="parallax-scene">
+					<img src="img/bg/bg-parallax-footer-1.png" data-depth="0.2">
+				</div>
+			</div>
+
+			<div class="container-fluid-page">
+
+				<div class="footer-content clearfix">
+					<div class="contacts-map clearfix col-md-4 p-h-15">
+						<div class="map-canvas map-container"></div>
+						<h3 class="style-1 m-t-15">Toshkent xaritasi</h3>
 					</div>
-					<div class="footer-socials">
-						<div class="col-md-3">
-							<h5><big>Мы в соцальных сетях:</big></h5>
-								<ul class="footer-socicons hover-color-1">
-									<li><a href="" title="" target="_blank"><i class="icm icm-instagram"></i></a></li>
-									<li><a href="" title="" target="_blank"><i class="icm icm-facebook-logo"></i></a></li>
-									<li><a href="" title="" target="_blank"><i class="icm icm-telegram"></i></a></li>
-									<li><a href="" title="" target="_blank"><i class="icm icm-vk"></i></a></li>
-								</ul>
+					<div class="contacts-map clearfix col-md-4 p-h-15">
+						<div class="map-canvas map-container"></div>
+						<h3 class="style-1 m-t-15">Samarqand xaritasi</h3>
+					</div>
+					<div class="footer-feedback col-md-offset-1 col-md-3">
+						<h2>Murojaat uchun:</h2>
+						<div class="m-v-10 hover-underline">
+							<span class="va-middle p-r-15"><i class="icm icm-call-answer"></i></span>
+							<span class="va-middle"><a href="tel:+998974022820">+998 97 <b>402-28-20</b></a></span>
 						</div>
-						<div class="col-md-6">
-							<h4 class="text-uppercase">Способы оплаты:</h4>
-							<ul class="list-inline li-m-v-5">
-								<li><a href=""><img src="img/payicons/click.jpg"></a></li>
-								<li><a href=""><img src="img/payicons/payme.jpg"></a></li>
-								<li><a href=""><img src="img/payicons/paynet.jpg"></a></li>
-								<li><a href=""><img src="img/payicons/visa.jpg"></a></li>
-								<li><a href=""><img src="img/payicons/mc.jpg"></a></li>
-							</ul>
-							<h5>Алтернативные способы оплаты:</h5>
-							<ul class="list-inline li-m-v-5">
-								<li><a href=""><img src="img/payicons/wm.jpg"></a></li>
-								<li><a href=""><img src="img/payicons/paypal.jpg"></a></li>
-								<li><a href=""><img src="img/payicons/yamoney.jpg"></a></li>
-							</ul>
+						<div class="m-v-10">
+							<span class="va-middle p-r-15"><i class="icm icm-black-back-closed-envelope-shape"></i></span>
+							<span class="va-middle">info@nmc.uz</span>
 						</div>
-						<div class="col-md-3 subscribe-form">
-							<h5><big>Оформить подписку:</big></h5>
-							<form class="">
-								<div class="input-content">
-									<input type="" name="" class="form-control" placeholder="Введите адрес почты">
-									<button type="submit" class="btn-res">Подписаться</button>
-								</div>
-							</form>
+						<div class="btn-def m-v-30 box-xs-10">
+							<a href="#form_def" data-fancybox>CHIPTA SOTIB OLISH</a>
+						</div>
+
+						<div class="footer-socicons m-v-15 text-nowrap">
+							<ul class="">
+								<li><a href="" title="" target="_blank"><i class="icm icm-facebook-logo"></i></a></li>
+								<li><a href="" title="" target="_blank"><i class="icm icm-telegram"></i></a></li>
+								<li><a href="" title="" target="_blank"><i class="icm fa fa-instagram"></i></a></li>
+							</ul>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="copy-content text-center-sm">
-				<div class="container clearfix">
-					<div class="footer-other m-v-30">
-						<ul class="list-inline text-center">
-							<li><a href=""><img src="img/payicons/unclear-1.jpg"></a></li>
-							<li><a href=""><img src="img/payicons/unclear-2.jpg"></a></li>
-							<li><a href=""><img src="img/payicons/unclear-3.jpg"></a></li>
-						</ul>
-						<ul class="list-inline text-center links m-v-15 hover-color-1">
-							<li><a href="">Карта сайта</a></li>
-							<li><a href="">Политика конфиденциальности</a></li>
-							<li><a href="">Ограничение ответственности</a></li>
-							<li><a href="">Условия использования</a></li>
-							<li><a href="">Политика в области социальных сетей</a></li>
-							<li><a href="">Этический кодекс</a></li>
-							<li><a href="">Положения и Условия</a></li>
-							<li><a href="">Политики и Процедуры</a></li>
-							<li><a href="">Доходы и заработок</a></li>
-							<li><a href="">Связаться с нами</a></li>
-						</ul>
-					</div>
+				<div class="container-fluid-page clearfix">
 					<div class="row">
-						<div class="copyright col-md-6 p-v-10 p-h-15">
+						<div class="copyright col-md-4 p-v-10 p-h-15">
 							<p>© <time id="copydate"></time> Все права защищены.</p>
 							<script>copydate.innerText = new Date().getFullYear()</script>
 						</div>
-						<div class="dev col-md-6 hidden-xs p-h-15 hidden-sm text-right-md p-v-10">
+						<div class="dev col-md-4 hidden-xs p-h-15 hidden-sm text-right-md p-v-10">
 							<p>
 								<a href="https://www.life-style.uz" class="link" title="Создание и продвижение сайтов">Создание сайтов <em><span class="color-1">Life </span></em>Style</a>
 							</p>
@@ -991,6 +961,86 @@
 	<!-- SCRIPTS -->
 	<script src="js/scripts.min.js"></script>
 	<script src="js/main.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAVUinUZqQAIM1NfbavWbOKtsc3l-XE_ag"></script>
+  <script type="text/javascript">
+  	var mapEls =  document.getElementsByClassName("map-canvas");
+  	var dotsArray = [
+  		{
+  			coordinates: [41.34765, 69.354354343],
+  			description: "<div class='window-content align-center'><p>м. Львов, вул. Мирзо Улугбек, 317</p></div>"
+  		},
+  		{
+  			coordinates: [41.33765, 69.354454343],
+  			description: "<div class='window-content align-center'><p>м. Львов, вул. Мирзо Улугбек, 317</p></div>"
+  		}
+  	];
+  	
+	  if (mapEls.length) {
+	    var map;
+	    function initialize(mapEl, properties) {
+
+	      var mapOptions = {
+	        mapTypeId: google.maps.MapTypeId.ROADMAP,
+	        mapTypeControl: false,
+	        zoom: 15,
+	        zoomControl: true,
+	        zoomControlOptions: {
+	          style: google.maps.ZoomControlStyle.DEFAULT,
+	          position: google.maps.ControlPosition.DEFAULT
+	        },
+	        panControl: true,
+	        panControlOptions: {
+	          position: google.maps.ControlPosition.LEFT_TOP
+	        },
+	        streetViewControl: false,
+	        scaleControl: false,
+	        overviewMapControl: false,
+	        center: new google.maps.LatLng(properties.coordinates[0], properties.coordinates[1])
+	      };
+
+
+
+	      map = new google.maps.Map(mapEl, mapOptions);
+
+	      var marker = new google.maps.Marker({
+	        position: new google.maps.LatLng(properties.coordinates[0], properties.coordinates[1]),
+	        map: map,
+	        icon: "img/icons/map-marker.png",
+	        title: 'marker'
+	      });
+
+	      map.setOptions({
+	        //styles: mapStyles,
+	        disableDefaultUI: true
+	      });
+
+	      var transitLayer = new google.maps.TransitLayer();
+	      transitLayer.setMap(map);
+
+	      var bicyclingLayer = new google.maps.BicyclingLayer();
+	      bicyclingLayer.setMap(map);
+
+	      
+
+	      var infowindow = new google.maps.InfoWindow({
+	        content: properties.description
+	      });
+
+	      google.maps.event.addListener(marker, 'click', function() {
+	        infowindow.open(map, marker);
+	      });
+	      
+	    }
+
+	    for (var i = 0; i < mapEls.length; i++) {
+	    	initialize(mapEls[i], dotsArray[i]);
+	    }
+
+	    //google.maps.event.addDomListener(window, 'load', initialize);
+
+	  }
+
+  </script>
 </body>
 
 </html>

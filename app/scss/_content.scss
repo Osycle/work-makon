@@ -209,10 +209,53 @@ figcaption{
 
 
 
-
+.parallax-scenes{
+	position: absolute;
+}
 
 
 //bnr
+.bnr{
+	position: relative;
+	.bnr-circle{
+		position: absolute;
+		bottom: -200px;
+		transform: translateX(-60%);
+		.img{
+			width: 537px;
+			height: 537px;
+			background-size: cover;
+		}
+	}
+	.parallax-scenes{
+		width: 100%;
+		height: 100%;
+		.parallax-scene{
+			width: 100%;
+			height: 100%;
+		}
+		.img{
+			width: 100%;
+			height: 100%;
+			&:nth-child(1){
+				background-size: auto;
+				background-position: center 80%;
+			}
+			&:nth-child(2){
+				background-position: left 100%;
+			}
+			&:nth-child(3){
+				background-position: left center;
+			}
+
+		}
+	}
+	@media (max-width: 991px) {
+		.parallax-scenes, .bnr-circle{
+			display: none;
+		}
+	}
+}
 .bnr-wrapper{
 	background-position: center;
 	background-repeat: no-repeat;
@@ -239,6 +282,9 @@ figcaption{
 			font-size: em(50);
 			line-height: 120%;
 			font-weight: 800;
+			@media (min-width: 1880px){
+				font-size: em(70);
+			}
 		}
 		img{
 			width: 180px;
@@ -265,9 +311,7 @@ figcaption{
 		.desc-left{
 			padding-top: 30px;
 			padding-left: 30px;
-			p{
-				font-size: em(36);
-			}
+
 			&:before{
 				@extend .clafclear;
 				width: 280px;
@@ -276,6 +320,17 @@ figcaption{
 				left: 0;
 				background-color: $color-1;
 			}
+			@media (min-width: 1880px){
+				p{
+					font-size: em(36);
+				}
+			}
+			@media (max-width: 1879px){
+				p{
+					font-size: em(28);
+				}
+			}
+
 		}
 		.desc-right{
 			position: relative;

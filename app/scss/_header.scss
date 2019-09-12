@@ -2,3 +2,23 @@
 /*
 										 ---HEADER---
 */
+
+
+.form-def{
+	background: linear-gradient(to bottom right, #35383f, #000);
+	color: white;
+	text-align: center;
+	input, textarea{
+		background-color: #35383f; 
+		background: linear-gradient(to right, #35383f, #191a1c);
+		border: none;
+		color: white;
+		resize: none;
+		&:focus{
+			box-shadow: 0 0 4px -2px white;
+		}
+	}
+	@media (min-width: 991px){
+		max-width: 500px;
+	}
+}
