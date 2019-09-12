@@ -749,6 +749,11 @@ figcaption{
 					td{
 						padding-top: 25px;
 					}
+					&~tr{
+						&:hover{
+							background-color: rgba($color-1, 0.05);
+						}
+					}
 				}
 				td{
 					padding: 12px 15px;
@@ -770,15 +775,25 @@ figcaption{
 }
 .supported-items{
 	figure{
+		*{
+			backface-visibility: hidden;
+		}
 		.img-content{
 			background-color: white;
 			padding: 40px 40px;
+			
+			transition: all 0.3s ease;
 			.img{
 				background-size: contain;
 				height: 150px;
 			}
 			@media (max-width: 991px){
 				padding: 10px 10px;
+			}
+		}
+		&:hover{
+			.img-content{
+				@extend .shadow-box-1;
 			}
 		}
 	}
@@ -788,6 +803,9 @@ figcaption{
 //partners
 .partners-items{
 	figure{
+		*{
+			backface-visibility: hidden;
+		}
 		.img-content{
 			background-color: white;
 			padding: 15px 30px;
@@ -795,6 +813,12 @@ figcaption{
 			.img{
 				background-size: contain;
 				height: 140px;
+				transition: all 0.3s ease;
+			}
+		}
+		&:hover{
+			.img{
+				transform: scale(1.05);
 			}
 		}
 	}

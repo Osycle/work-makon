@@ -60,6 +60,9 @@
 				background-color: rgba($color-1, 0.5);
 			}
 		}
+		@media (max-width: 991px){
+			text-align: center;
+		}
 	}
 	.icm{
 		width: 40px;

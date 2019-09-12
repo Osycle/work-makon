@@ -7344,7 +7344,7 @@ table {
   -webkit-box-shadow: 0 0 16px -3px rgba(0, 0, 0, 0.4);
   box-shadow: 0 0 16px -3px rgba(0, 0, 0, 0.4); }
 
-.shadow-box-1, .partners-items figure .img-content {
+.shadow-box-1, .supported-items figure:hover .img-content, .partners-items figure .img-content {
   -webkit-box-shadow: 0 0 20px -3px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 20px -3px rgba(0, 0, 0, 0.1); }
 
@@ -8894,6 +8894,9 @@ figcaption {
 .events table tbody tr:nth-child(1) td {
   padding-top: 25px; }
 
+.events table tbody tr:nth-child(1) ~ tr:hover {
+  background-color: rgba(227, 30, 36, 0.05); }
+
 .events table tbody tr td {
   padding: 12px 15px; }
   .events table tbody tr td:nth-child(1) {
@@ -8903,9 +8906,16 @@ figcaption {
 .supported {
   background-color: #f7f7f7; }
 
+.supported-items figure * {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
 .supported-items figure .img-content {
   background-color: white;
-  padding: 40px 40px; }
+  padding: 40px 40px;
+  -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; }
   .supported-items figure .img-content .img {
     -webkit-background-size: contain;
     background-size: contain;
@@ -8914,13 +8924,25 @@ figcaption {
     .supported-items figure .img-content {
       padding: 10px 10px; } }
 
+.partners-items figure * {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
 .partners-items figure .img-content {
   background-color: white;
   padding: 15px 30px; }
   .partners-items figure .img-content .img {
     -webkit-background-size: contain;
     background-size: contain;
-    height: 140px; }
+    height: 140px;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease; }
+
+.partners-items figure:hover .img {
+  -webkit-transform: scale(1.05);
+  -ms-transform: scale(1.05);
+  transform: scale(1.05); }
 
 @media (max-width: 991px) {
   .partners-items {
@@ -8978,6 +9000,9 @@ figcaption {
   font-size: 0.95em; }
   .footer-socicons li:hover .icm {
     background-color: rgba(227, 30, 36, 0.5); }
+  @media (max-width: 991px) {
+    .footer-socicons li {
+      text-align: center; } }
 
 .footer-socicons .icm {
   width: 40px;
