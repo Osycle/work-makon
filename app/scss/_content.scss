@@ -599,7 +599,12 @@ figcaption{
 }
 .humans-items{
 	color: white;
+	text-align: center;
 	.fig-wrapper{
+		background-color: $color-1;
+		@media (min-width: 991px){
+			text-align: left;
+		}
 		height: 360px;
 		//height: 16.6vw;
 		@media (max-width: 991px){
