@@ -616,6 +616,12 @@ table {
 	transition: all 0.2s ease;
 	position: relative;
 	overflow: visible;
+	border-radius: 4px;
+	letter-spacing: 0.15em;
+	box-shadow: 0 0 30px rgba($color-1, 0.7),
+		inset 0 -3px 0px 0px rgba(black, 0.3),
+		inset 0 -20px 16px 0px rgba(white, 0.05);
+
 	&.style-1{
 		&:before, &:after{
 			@extend .clafclear;
@@ -648,23 +654,34 @@ table {
 		background-color: $color-1;
 	}	
 	&:not(.changecolor-none):hover{
-		//box-shadow: 0px 0px 15px 2px $color-1;
-		background-repeat: repeat;
-		background-color: darken($color-1, 5%);
-	}
-	&.radius{
-		border-radius: 20px;
+		box-shadow: 0 0 30px rgba($color-1, 0.7),
+			inset 0 -3px 0px 0px rgba(black, 0.3),
+			inset 0 20px 16px 0px rgba(black, 0.1);
+		&:active{
+			box-shadow: 0 0 30px rgba(white, 0),
+				inset 0 -3px 0px 0px rgba(black, 0.3),
+				inset 0 -25px 16px 0px rgba(white, 0.1);
+		}
 	}
 	&.reverse{
+		box-shadow: 0 0 30px rgba(white, 0.1),
+			inset 0 -3px 0px 0px rgba(black, 0.3),
+			inset 0 -25px 16px 0px rgba(white, 0.1);
 		&:not([class*="bg-color"]){
-			background-image: none;
-			background-color: $color-gray-4;
-			font-weight: 400;
+			background-color: black;
 		}
 		&:not(.changecolor-none):hover{
-			background-color: darken($color-3, 10%);
+			box-shadow: 0 0 30px rgba(white, 0.1),
+				inset 0 3px 0px 0px rgba(black, 0.3),
+				inset 0 25px 16px 0px rgba(white, 0.1);
+			&:active{
+				box-shadow: 0 0 30px rgba(white, 0),
+					inset 0 3px 0px 0px rgba(black, 0.3),
+					inset 0 25px 16px 0px rgba(white, 0.1);
+			}
 		}
 	}
+
 }
 
 
@@ -931,7 +948,9 @@ thined{
 	font-weight: 100;
 }
 
-
+.h1{
+	@extend h1;
+}
 h1,h2,h3,h4,h5{
 	color: inherit;
 	line-height: 140%;
@@ -948,9 +967,6 @@ h1{
 	margin-bottom: 15px;
 	font-weight: 800;
 	line-height: 120%;
-	@media (min-width: 1880px){
-		font-size: em(50);
-	}
 	@media (max-width: 991px) {
 		font-size: em(26);
 	}
@@ -964,8 +980,8 @@ h2{
 	}
 } 
 h3{
-	font-weight: 600;
-	font-size: em(20);
+	font-weight: 800;
+	font-size: em(26);
 	content: "";
 }
 h4{
@@ -1035,11 +1051,6 @@ main{
     font-style: normal;
 		position: relative;
 		line-height: 135%;
-	}
-	@media(min-width: 1880px){
-		p{
-			font-size: em(18);
-		}
 	}
 	ul:not([class]){
 		text-align: left;

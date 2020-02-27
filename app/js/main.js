@@ -350,10 +350,10 @@ setTimeout(function() {
 	};
 }, 10);
 
-document.addEventListener('copy', function(e){
-  e.preventDefault(); // default behaviour is to copy any selected text
-  e.clipboardData.setData('text/plain', '');
-});
+// document.addEventListener('copy', function(e){
+//   e.preventDefault(); // default behaviour is to copy any selected text
+//   e.clipboardData.setData('text/plain', '');
+// });
 
 
 
