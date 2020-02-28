@@ -616,12 +616,10 @@ table {
 	transition: all 0.2s ease;
 	position: relative;
 	overflow: visible;
-	border-radius: 4px;
-	letter-spacing: 0.15em;
-	box-shadow: 0 0 30px rgba($color-1, 0.7),
-		inset 0 -3px 0px 0px rgba(black, 0.3),
-		inset 0 -20px 16px 0px rgba(white, 0.05);
-
+	border-radius: 0;
+	&, *{
+		backface-visibility: hidden;
+	}
 	&.style-1{
 		&:before, &:after{
 			@extend .clafclear;
@@ -647,6 +645,9 @@ table {
 		font-weight: 700;
 		font-size: 0.75em;
 	}
+	big{
+		font-weight: 800;
+	}
 	&:not([class*="color-"]):not([class*="bg-color"]){
 		color: white;
 	}
@@ -654,32 +655,21 @@ table {
 		background-color: $color-1;
 	}	
 	&:not(.changecolor-none):hover{
-		box-shadow: 0 0 30px rgba($color-1, 0.7),
-			inset 0 -3px 0px 0px rgba(black, 0.3),
-			inset 0 20px 16px 0px rgba(black, 0.1);
-		&:active{
-			box-shadow: 0 0 30px rgba(white, 0),
-				inset 0 -3px 0px 0px rgba(black, 0.3),
-				inset 0 -25px 16px 0px rgba(white, 0.1);
-		}
+		transform: translateY(-3px);
+	}
+	&:active{
+		transform: translateY(1px) !important;	
 	}
 	&.reverse{
-		box-shadow: 0 0 30px rgba(white, 0.1),
-			inset 0 -3px 0px 0px rgba(black, 0.3),
-			inset 0 -25px 16px 0px rgba(white, 0.1);
 		&:not([class*="bg-color"]){
 			background-color: black;
 		}
-		&:not(.changecolor-none):hover{
-			box-shadow: 0 0 30px rgba(white, 0.1),
-				inset 0 3px 0px 0px rgba(black, 0.3),
-				inset 0 25px 16px 0px rgba(white, 0.1);
-			&:active{
-				box-shadow: 0 0 30px rgba(white, 0),
-					inset 0 3px 0px 0px rgba(black, 0.3),
-					inset 0 25px 16px 0px rgba(white, 0.1);
-			}
-		}
+	}
+	@media (min-width: 1450px){
+		font-size: 1.2em;
+	}
+	@media (max-width: 1449px){
+		font-size: 0.9em;
 	}
 
 }

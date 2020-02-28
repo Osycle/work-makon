@@ -40,7 +40,7 @@
 	position: absolute;
 	z-index: 0;
 	background-size: cover;
-	height: 100%;
+	height: calc(100% + 30px);
 	bottom: 0;
 	right: 0;
 	@media (max-width: 991px) {
@@ -89,24 +89,8 @@
 			text-align: center;
 		}
 	}
-	span{
-		font-weight: 300;
-	}
-	.btn-def{
-		a{
-			background-color: white;	
-			color: $color-1;
-			font-weight: 800;
-			transition: all 0.3s ease;
-			padding: 25px 15px;
-		}
-		&:hover{
-			a{
-				color: white;
-				background-color: #333;
-			}
-		}
-	}
+
+
 }
 .footer-content{
 	padding-top: 30px;
@@ -143,9 +127,12 @@ h2, h3, h4, h5{
 	}
 }
 .map-canvas{
-	height: 300px;
+	height: 400px;
 	width: 100%;
 	color: black;
+	@media (min-width: 1450px){
+		height: 500px;
+	}
 }
 @media (max-width: 991px) {
 	.map-canvas{
