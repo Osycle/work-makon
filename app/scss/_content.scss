@@ -316,7 +316,7 @@ figcaption{
 	}
 	.desc-content{
 		position: relative;
-		margin-top: 8vh;
+		margin-top: 0;
 		font-weight: 500;
 		display: inline-block;
 		//background-color: #2e3137;
@@ -361,7 +361,7 @@ figcaption{
 		.desc-item{
 			padding-right: 6%;
 			padding-left: 6%;
-			min-width: 370px;
+			min-width: 320px;
 			max-width: 420px;
 			position: relative;
 			&:not(:last-child){
@@ -456,6 +456,7 @@ figcaption{
 		height: auto;
 		min-height: auto;
 		position: relative;
+		background-size: cover;
 		overflow: hidden;
 		&:after{
 			@extend .clafclear;
@@ -549,7 +550,7 @@ figcaption{
 		position: absolute;
 		width: calc(100% + 120px);
 		left: -60px;
-		display: flex;
+		//display: flex;
 		justify-content: space-between;
 		pointer-events: none;
 		*{
@@ -568,6 +569,17 @@ figcaption{
 			&:hover{
 				background-color: rgba(black, 0.3);
 			}
+			&:nth-child(1){
+				//float: left;
+			}
+			&:nth-child(2){
+				//float: right;
+			}
+		}
+		@media (max-width: 991px){
+			left: 5%;
+			top: 40%;
+			width: 90%;
 		}
 	}
 	figcaption{

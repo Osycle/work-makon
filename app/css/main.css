@@ -8532,7 +8532,7 @@ figcaption {
       margin-bottom: 15px; }
   .bnr-wrapper .desc-content {
     position: relative;
-    margin-top: 8vh;
+    margin-top: 0;
     font-weight: 500;
     display: inline-block;
     background-image: -webkit-gradient(linear, left top, right top, from(#31343b), to(#222328));
@@ -8576,7 +8576,7 @@ figcaption {
     .bnr-wrapper .desc-content .desc-item {
       padding-right: 6%;
       padding-left: 6%;
-      min-width: 370px;
+      min-width: 320px;
       max-width: 420px;
       position: relative; }
       .bnr-wrapper .desc-content .desc-item:not(:last-child):before {
@@ -8666,6 +8666,8 @@ figcaption {
     height: auto;
     min-height: auto;
     position: relative;
+    -webkit-background-size: cover;
+    background-size: cover;
     overflow: hidden; }
     .bnr-pages .wrapper:after {
       width: 400px;
@@ -8764,10 +8766,6 @@ figcaption {
   width: -webkit-calc(100% + 120px);
   width: calc(100% + 120px);
   left: -60px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
   -ms-flex-pack: justify;
@@ -8799,6 +8797,11 @@ figcaption {
     transition: all 0.3s ease; }
     .bnr-training .prevnext-btn a:hover {
       background-color: rgba(0, 0, 0, 0.3); }
+  @media (max-width: 991px) {
+    .bnr-training .prevnext-btn {
+      left: 5%;
+      top: 40%;
+      width: 90%; } }
 
 .bnr-training figcaption {
   text-transform: none; }
